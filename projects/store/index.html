@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee House</title>
+</head>
+<body>
+
+<h1>Coffee House</h1>
+
+<div>
+  <label>Фамилия:</label>
+  <input type="text" id="surname"><br><br>
+  <label>Имя:</label>
+  <input type="text" id="name"><br><br>
+</div>
+
+<div id="menu">
+  <div>
+    <input type="checkbox" id="espresso" data-price="80" onclick="calculateTotal()"> Эспрессо 80р.
+    <input type="number" id="espresso-qty" value="0" min="0" oninput="calculateTotal()">
+  </div>
+  <div>
+    <input type="checkbox" id="americano" data-price="110" onclick="calculateTotal()"> Американо 110р.
+    <input type="number" id="americano-qty" value="0" min="0" oninput="calculateTotal()">
+  </div>
+  <div>
+    <input type="checkbox" id="latte" data-price="120" onclick="calculateTotal()"> Латте 120р.
+    <input type="number" id="latte-qty" value="0" min="0" oninput="calculateTotal()">
+  </div>
+  <div>
+    <input type="checkbox" id="cappuccino" data-price="90" onclick="calculateTotal()"> Капучино 90р.
+    <input type="number" id="cappuccino-qty" value="0" min="0" oninput="calculateTotal()">
+  </div>
+  <div>
+    <input type="checkbox" id="chocolate-cake" data-price="80" onclick="calculateTotal()"> Шоколадный кекс 80р.
+    <input type="number" id="chocolate-cake-qty" value="0" min="0" oninput="calculateTotal()">
+  </div>
+  <div>
+    <input type="checkbox" id="blueberry-cake" data-price="90" onclick="calculateTotal()"> Черничный кекс 90р.
+    <input type="number" id="blueberry-cake-qty" value="0" min="0" oninput="calculateTotal()">
+  </div>
+  <div>
+    <input type="checkbox" id="apple-tart" data-price="100" onclick="calculateTotal()"> Яблочный тарт 100р.
+    <input type="number" id="apple-tart-qty" value="0" min="0" oninput="calculateTotal()">
+  </div>
+</div>
+
+<p id="total">Итого: 0 р.</p>
+
+<button onclick="placeOrder()">Оформить заказ</button>
+
+<script src="./main.js"></script>
+
+</body>
+</html>
